@@ -1,23 +1,16 @@
 # Описание проекта
+Архитектуру приложения обеспечивает  Framework Spring MVC.
 
-[I'm an inline-style link](https://www.google.com)
+**Model** - объединяет данные приложения. <br/>
+**View** - отвечает за отображение данных Model.<br/>
+**Controller** - обрабатывает запрос пользователя, создаёт 
+соответствующую Модель и передаёт её для отображения в Вид.
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+**@Entity**<br/>
+**@Service**<br/>
+**@Controller**<br/>
+**@Repository**<br/>
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+@Configuration
+@Application
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
