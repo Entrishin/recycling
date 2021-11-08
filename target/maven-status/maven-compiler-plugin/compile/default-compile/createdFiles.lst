@@ -1,0 +1,12 @@
+org\leti\Application.class
+org\leti\Controller\GreetingController.class
+org\leti\Service\MailSender.class
+org\leti\Config\MvcConfig.class
+org\leti\Repo\UserRepo.class
+org\leti\Service\UserService.class
+org\leti\Controller\UserController.class
+org\leti\Domain\User.class
+org\leti\Config\WebSecurityConfig.class
+org\leti\Controller\RegistrationController.class
+org\leti\Config\MailConfig.class
+org\leti\Domain\Role.class
