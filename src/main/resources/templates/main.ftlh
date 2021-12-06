@@ -1,5 +1,7 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-<h4>Это <b>главная </b> страница, на которой в будушем будет вся основная логика</h4>
+    <div class="container mt-5">
+      <a href="/entry" class="btn btn-info" role="button">Создать проводку</a>
+    </div>
 </@c.page>

@@ -9,16 +9,8 @@ import java.util.Map;
 
 @Controller
 public class GreetingController {
-    @Autowired
-    UserRepo userRepo;
-
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
         return "greeting";
-    }
-
-    @GetMapping("/main")
-    public String main(Map<String, Object> model) {
-        return "main";
     }
 }
