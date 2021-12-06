@@ -4,13 +4,12 @@ C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Controller\GreetingC
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Controller\RegistrationController.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\TransactionType.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\EntryRepo.java
-C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\TxInput.java
-C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\TxInputRepo.java
-C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\TxOutput.java
+C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Controller\MainController.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Service\MailSender.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\ServletInitializer.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\TransactionTypeRepo.java
-C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\TxOutputRepo.java
+C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Service\EntryService.java
+C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Service\TransactionService.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\Role.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Config\MvcConfig.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\Transaction.java
@@ -18,6 +17,7 @@ C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\UnitRepo.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Service\UserService.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Application.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\UnitAmountRepo.java
+C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Controller\EntryController.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\User.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Domain\PaymentGateway.java
 C:\Users\user\IdeaProjects\recycling\src\main\java\org\leti\Repo\UserRepo.java

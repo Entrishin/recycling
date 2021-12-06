@@ -5,6 +5,7 @@ import org.leti.Repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -21,9 +22,7 @@ public class TransactionService {
     @Autowired
     UnitRepo unitRepo;
     @Autowired
-    TxInputRepo txInputRepo;
-    @Autowired
-    TxOutputRepo txOutputRepo;
+    EntryRepo entryRepo;
 
     public Map<Long, String> getAllTransactionTypes() {
         List<TransactionType> types = transactionTypeRepo.findAll();
@@ -58,17 +57,38 @@ public class TransactionService {
     }
 
 
-    public Transaction addTransaction(String transType, String debet, String credit, String amount, String amountType, String unit, Entry entry) {
+    public Transaction addTransaction(String transType, String debet, String credit, String amount, String amountType, String unit, String entryId) {
         Transaction transaction = new Transaction();
-        transaction.setEntry(entry);
+        transaction.setEntry(entryRepo.findById(entryId).get());
         transaction.setTransactionTypeId(transactionTypeRepo.findByTitle(transType).getId());
         transaction.setAmountId(unitAmountRepo.findByTitle(amountType).getId());
-        transaction.setTimestamp(new Date().getTime());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        transaction.setTimestamp(("" + dateFormat.format( new Date() ) ));
         transaction.setUnitId(unitRepo.findByTitle(unit).getId());
-
-        txInputRepo.save(new TxInput(Long.parseLong(debet), transaction));
-        txOutputRepo.save(new TxOutput(Long.parseLong(credit), transaction));
-
+        transaction.setAccountFrom(credit);
+        transaction.setAccountTo(debet);
+        transaction.setAmount(amount.isEmpty()?0.0:Double.parseDouble(amount));
+        transaction.setAmountTitle(amountType);
+        transaction.setTransactionTypeTitle(transType);
+        transaction.setUnitTitle(unit);
+        transactionRepo.save(transaction);
         return transaction;
     }
+
+    public List<Transaction> getAllTransactionsByEntryId(String entryId) {
+        return transactionRepo.findAllByEntryId(entryId);
+    }
+
+    public String getTransactionTypeById(Long id) {
+        return transactionTypeRepo.findById(id).get().getTitle();
+    }
+    public String getAmountTypeById(Long id) {
+        return unitAmountRepo.findById(id).get().getTitle();
+    }
+    public String getUnitById(Long id) {
+        return unitRepo.findById(id).get().getTitle();
+    }
+
+
+
 }

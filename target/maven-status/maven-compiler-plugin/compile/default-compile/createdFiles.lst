@@ -1,12 +1,13 @@
 org\leti\Domain\Transaction.class
-org\leti\Repo\TxInputRepo.class
 org\leti\Repo\UnitAmountRepo.class
 org\leti\Application.class
 org\leti\Repo\TransactionRepo.class
 org\leti\Controller\GreetingController.class
+org\leti\Service\EntryService.class
 org\leti\Service\MailSender.class
 org\leti\Domain\PaymentGateway.class
-org\leti\Repo\TxOutputRepo.class
+org\leti\Controller\EntryController.class
+org\leti\Controller\MainController.class
 org\leti\Config\MvcConfig.class
 org\leti\Repo\UserRepo.class
 org\leti\Repo\PaymentGateWayRepo.class
@@ -18,10 +19,9 @@ org\leti\Domain\User.class
 org\leti\Config\WebSecurityConfig.class
 org\leti\Repo\UnitRepo.class
 org\leti\Controller\RegistrationController.class
-org\leti\Domain\TxOutput.class
 org\leti\Controller\BlockchainController.class
 org\leti\Repo\EntryRepo.class
-org\leti\Domain\TxInput.class
+org\leti\Service\TransactionService.class
 org\leti\Config\MailConfig.class
 org\leti\Repo\TransactionTypeRepo.class
 org\leti\Domain\UnitAmount.class

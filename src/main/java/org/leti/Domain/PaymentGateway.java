@@ -8,7 +8,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "peyment_gateway")
+@Table(name = "payment_gateway")
 public class PaymentGateway {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

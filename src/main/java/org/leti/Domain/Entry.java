@@ -14,6 +14,15 @@ public class Entry {
     @Id
     private String id;
     private String comment;
+    private String timestamp;
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public Entry() {
     }
@@ -22,9 +31,10 @@ public class Entry {
         this.id = id;
     }
 
-    public Entry(String id, String comment) {
+    public Entry(String id, String comment, String timestamp) {
         this.id = id;
         this.comment = comment;
+        this.timestamp = timestamp;
     }
 
     public String getId() {

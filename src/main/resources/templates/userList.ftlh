@@ -1,8 +1,7 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-    Список пользователей
-    <table>
+    <table class="table table-striped">
         <thead>
         <tr>
             <th>Имя</th>

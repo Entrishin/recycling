@@ -2,6 +2,7 @@ package org.leti.Domain;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Таблица "Транзакция"
@@ -12,9 +13,7 @@ import javax.persistence.*;
  * transactionTypeId - id типа транзакции
  * amountId - ID размерности
  * unitId - ID ресурса (пластики/стекло/деньги?)
- * Также к каждой транзакции будут (по ID) привязаны таблицы:
- * @see TxInput
- * @see TxOutput
+ * Также к каждой транзакции будут (по ID) привязана таблица:
  * @see PaymentGateway
  */
 @Entity
@@ -26,15 +25,71 @@ public class Transaction {
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Entry entry;
-    private Long timestamp;
+    private String timestamp;
     private String invoiceUrl;
     private Long transactionTypeId;
     private Long amountId;
-
+    private String accountFrom;
+    private String accountTo;
+    private Double amount;
     private Long unitId;
+
+    private String amountTitle;
+    private String transactionTypeTitle;
+    private String unitTitle;
+
+    public String getAmountTitle() {
+        return amountTitle;
+    }
+
+    public void setAmountTitle(String amountTitle) {
+        this.amountTitle = amountTitle;
+    }
+
+    public String getTransactionTypeTitle() {
+        return transactionTypeTitle;
+    }
+
+    public void setTransactionTypeTitle(String transactionTypeTitle) {
+        this.transactionTypeTitle = transactionTypeTitle;
+    }
+
+    public String getUnitTitle() {
+        return unitTitle;
+    }
+
+    public void setUnitTitle(String unitTitle) {
+        this.unitTitle = unitTitle;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+
 
     public Long getAmountId() {
         return amountId;
+    }
+
+    public String getAccountFrom() {
+        return accountFrom;
+    }
+
+    public void setAccountFrom(String accountFrom) {
+        this.accountFrom = accountFrom;
+    }
+
+    public String getAccountTo() {
+        return accountTo;
+    }
+
+    public void setAccountTo(String accountTo) {
+        this.accountTo = accountTo;
     }
 
     public void setAmountId(Long amountId) {
@@ -73,11 +128,11 @@ public class Transaction {
         this.entry = entry;
     }
 
-    public Long getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
