@@ -17,6 +17,6 @@ public interface EntryRepo extends JpaRepository<Entry, String> {
     @Transactional
     @Query("update Entry e set e.comment = :comment where e.id = :entryId")
     int updateEntryComment(@Param("comment") String comment,
-                                   @Param("entryId") String entryId);
+                           @Param("entryId") String entryId);
 
 }
