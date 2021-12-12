@@ -25,4 +25,6 @@ public class MainController {
         model.addAttribute("main_text","Создание проводки");
         return "entryEdit";
     }*/
+
+    //z
 }
