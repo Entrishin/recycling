@@ -1,0 +1,53 @@
+
+@startuml
+
+Transaction <|-- UnitAmount
+Transaction <|-- Unit
+Transaction <|-- Entry
+TransactionType <|-- Transaction
+
+
+class Entry {
+ID (Long)
+Comment (varchar 255)
+Timestamp (Date)
+}
+
+class User {
+ID (long)
+activation_code (varchar 100)
+active (boolean)
+email (varchar 100)
+fullname (varchar 100)
+password (varchar 100)
+username (varchar 100)
+}
+
+class UnitAmount {
+ID (long)
+Title (varchar 100)
+}
+
+class Unit {
+ID (long)
+Title (varchar 100)
+}
+
+class Transaction {
+ID (Long)
+Account_from (varchar 50)
+Account_to (varchar 50)
+Amount (double)
+Amount_Type_Id (long)
+Timestamp (Date)
+Transaction_type_Id (long)
+Unit_id (long)
+Entry_id (Long)
+invoice_url (varchar 255)
+}
+
+class TransactionType{
+ID (long)
+Title (varchar 100)
+}
+@enduml
